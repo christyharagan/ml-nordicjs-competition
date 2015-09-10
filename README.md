@@ -12,10 +12,15 @@ The game itself, presents the user with premises (boolean statements asserted as
 
 There is then a second page showing a bar chart of all guesses made, which demonstrate the real-time updates as players make their choices.
 
+How to submit an entry
+--
+
+To submit an entry to our coding competition, you will need to upload your code to GitHub and provide us with the url. Deadline for submission is 3pm on Friday. We will be announcing the winners at 5pm. At stake is a Lego Mindstorms kits. Any other questions, feel free to ask us questions.
+
 Information
 --
 
-We have designed MarkLogic to write JavaScript or TypeScipt like you would normally. However, there are a few things you need to be aware of. We recommend you quickly check out our guide on [Server-Side JavaScript](https://developer.marklogic.com/features/javascript). Then, for a full API of our documentation go to our [API page](https://docs.marklogic.com). If you're a TypeScript developer, please note that we have provided TypeScript definitions for a small subset of our API as this is a work in progress. You are obviously free to use any function, but be aware that the definitions might not list them. If you do have a requirement, let us know and we can add it quickly.
+We have designed MarkLogic to write JavaScript or TypeScript like you would normally. However, there are a few things you need to be aware of. We recommend you quickly check out our guide on [Server-Side JavaScript](https://developer.marklogic.com/features/javascript). Then, for a full API of our documentation go to our [API page](https://docs.marklogic.com). If you're a TypeScript developer, please note that we have provided TypeScript definitions for a small subset of our API as this is a work in progress. You are obviously free to use any function, but be aware that the definitions might not list them. If you do have a requirement, let us know and we can add it quickly.
 
 Installation and Preparation
 --
