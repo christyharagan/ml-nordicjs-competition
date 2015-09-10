@@ -15,7 +15,13 @@ There is then a second page showing a bar chart of all guesses made, which demon
 How to submit an entry
 --
 
-To submit an entry to our coding competition, you will need to upload your code to GitHub and provide us with the url. Deadline for submission is 3pm on Friday. We will be announcing the winners at 5pm. At stake is a Lego Mindstorms kits. Any other questions, feel free to ask us questions.
+To submit an entry to our coding competition, you will need to upload your code to GitHub and provide us with the url and a description of what you've written. Deadline for submission is 3pm on Friday. We will be announcing the winners at 5pm. At stake is a Lego Mindstorms kits. Any other questions, feel free to ask us questions.
+
+Essentially, we're looking for cool ideas. It could be an application, a library, or an improvement to one of our libraries. But importantly: *We will be judging based on the MarkLogic aspects of your idea*. If you come up with an amazing idea that could be implemented on any technology, we won't rate it highly!
+
+We don't expect you to write a full blown working codebase, but there will definitely be bonus points for working code. However, even psuedo code would be an appropriate submission. Just make it clear in your readme.md description what your idea is, and where we should be focusing our attention in the code base.
+
+This project you'll check out is a full application, but you are free to throw the client tier if you're looking to build a server-side library
 
 Information
 --
@@ -74,6 +80,16 @@ npm run run
 Now, to play the game, go to: ```http://[middle.hostname]:[middle.port]/play.html```, and to view the results, go to: ```http://[middle.hostname]:[middle.port]/results.html```.
 
 For example, using the default values, these urls become: ```http://localhost:8080/play.html``` and ```http://localhost:8080/results.html```
+
+How it all works
+--
+
+At a very high level, there are three primary components:
+
+ * The client. This is written in [polymer](https://www.polymer-project.org/1.0/), but this could easily be written in Angular, React, Ember, etc.
+ * The server which is actually divided into two parts:
+  * The MarkLogic database platform. This is the part we're really interested in for your submission. Feel free to ask us as many questions as you like about this!
+  * The middle tier, which is a node.js server, which for this sample application is just used to proxy data to the client, since MarkLogic currently doesn't provide WebSocket support (which is what we use for real-time push to the client). Instead, the node.js server hosts an HTTP server that MarkLogic calls out to; then the node.js server pushes that out to the client via WebSockets (using the excellent socket.io library).
 
 Development
 --
